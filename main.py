@@ -1,10 +1,11 @@
 import os
 
-import requests
-from dotenv import load_dotenv
-import telebot
-import random
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import requests
+import telebot
+
+import random
 
 
 load_dotenv()
@@ -76,4 +77,5 @@ def send_image(message):
         )
 
 
-tg_bot.polling()
+if __name__ == "__main__":
+    tg_bot.polling(none_stop=True)
